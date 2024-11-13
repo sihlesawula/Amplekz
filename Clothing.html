@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE-Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecommerce Website With Payment</title>
+<!--Link To CSS-->
+<link rel="stylesheet" href="css/style.css">
+<!--Box Icons-->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+<!--Navbar-->
+<header>
+    <!--Nav-->
+    <div class="nav container">
+     <a href="index.html">
+        <button class="btn-edit">Back</button>
+        </a>
+        <!--Logo-->
+        <a href="#"class="logo">
+            <img src="img/Lil-Amplekz-17_3_2_-removebg-preview (1).png" width="5">
+        </a>
+        <!--Cart Icon-->
+        <i class='bx bx-shopping-bag' id="cart-icon" data-quantity="0"></i>
+        <!--Cart-->
+        <div class="cart">
+            <h2 class="cart-title">Your Cart</h2>
+            <!--Content-->
+            <div class="cart-content"></div>
+            <!--Total-->
+            <div class="total">
+                <div class="total-title">Total</div>
+                <div class="total-price">$0</div>
+            </div>
+            <!--Buy Button-->
+            <button type="button" class="btn-buy">Pay Now</button>
+            <!--Close Cart-->
+            <i class='bx bx-x' id="close-cart"></i>
+    </div>
+
+</header>
+<!--Products-->
+<section class="shop container">
+    <h2 class="section title">Shop Products</h2>
+    <!--Shop Content-->
+    <div class="shop-content">
+       
+         <!--Box 9-->
+         <div class="product-box">
+            <img 
+            src="assets/img/AMPLEKZ [Official Logo] T-Shirt/Black-Amp.png"
+             alt=""
+             class="product-img"
+             />
+        <h2 class="product-title">Black T Shirt</h2>
+        <span class="price">$350</span>
+        <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+
+ <!--Box 15-->
+ <div class="product-box">
+     <img 
+     src="assets/img/AMPLEKZ [Official Logo] T-Shirt/White-Amp.png"
+      alt=""
+      class="product-img"
+      />
+ <h2 class="product-title">White T Shirt</h2>
+ <span class="price">$350</span>
+ <i class='bx bx-shopping-bag add-cart'></i>
+ </div>
+
+
+         <!--Box 10-->
+         <div class="product-box">
+            <img 
+            src="assets/img/AMPLEKZ [Official Logo] T-Shirt/Blue-Amp.png"
+             alt=""
+             class="product-img"
+             />
+        <h2 class="product-title">Blue T Shirt</h2>
+        <span class="price">$350</span>
+        <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+
+
+                 <!--Box 11-->
+                 <div class="product-box">
+                    <img 
+                    src="assets/img/AMPLEKZ [Official Logo] T-Shirt/Green-Amp.png"
+                     alt=""
+                     class="product-img"
+                     />
+                <h2 class="product-title">Green T Shirt</h2>
+                <span class="price">$350</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+
+
+
+                         <!--Box 12-->
+         <div class="product-box">
+            <img 
+            src="assets/img/AMPLEKZ [Official Logo] T-Shirt/Navy-Amp.png"
+             alt=""
+             class="product-img"
+             />
+        <h2 class="product-title">Navy T Shirt</h2>
+        <span class="price">$350</span>
+        <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+
+
+
+                 <!--Box 13-->
+                 <div class="product-box">
+                    <img 
+                    src="assets/img/AMPLEKZ [Official Logo] T-Shirt/Purple-Amp.png"
+                     alt=""
+                     class="product-img"
+                     />
+                <h2 class="product-title">Purple T Shirt</h2>
+                <span class="price">$350</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+
+
+
+                         <!--Box 14-->
+         <div class="product-box">
+            <img 
+            src="assets/img/AMPLEKZ [Official Logo] T-Shirt/Red-Amp.png"
+             alt=""
+             class="product-img"
+             />
+        <h2 class="product-title">Red T Shirt</h2>
+        <span class="price">$350</span>
+        <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+                         <!--Box 16-->
+         <div class="product-box">
+            <img 
+            src="assets/img/AMPLEKZ [Official Logo] T-Shirt/Yellow-Amp.png"
+             alt=""
+             class="product-img"
+             />
+        <h2 class="product-title">Yellow T Shirt</h2>
+        <span class="price">$350</span>
+        <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+
+
+ <!--Box 1-->
+ <div class="product-box">
+     <img 
+     src="assets/img/AMPLEKZ [Official Logo] Across T-Shirt/Black-T.png"
+      alt=""
+      class="product-img"
+      />
+ <h2 class="product-title">Black  Cross T Shirt</h2>
+ <span class="price">$350</span>
+ <i class='bx bx-shopping-bag add-cart'></i>
+ </div>
+
+
+  <!--Box 2-->
+  <div class="product-box">
+     <img 
+     src="assets/img/AMPLEKZ [Official Logo] Across T-Shirt/Red-T.png"
+      alt=""
+      class="product-img"
+      />
+ <h2 class="product-title">Red Cross T Shirt</h2>
+ <span class="price">$350</span>
+ <i class='bx bx-shopping-bag add-cart'></i>
+ </div>
+
+  <!--Box 3-->
+  <div class="product-box">
+     <img 
+     src="assets/img/AMPLEKZ [Official Logo] Across T-Shirt/Navy-T.png"
+      alt=""
+      class="product-img"
+      />
+ <h2 class="product-title">Purple Cross T Shirt</h2>
+ <span class="price">$350</span>
+ <i class='bx bx-shopping-bag add-cart'></i>
+ </div>
+
+
+  <!--Box 4-->
+  <div class="product-box">
+     <img 
+     src="assets/img/AMPLEKZ [Official Logo] Across T-Shirt/Yellow-T.png"
+      alt=""
+      class="product-img"
+      />
+ <h2 class="product-title">Yellow Cross T Shirt</h2>
+ <span class="price">$350</span>
+ <i class='bx bx-shopping-bag add-cart'></i>
+ </div>
+
+
+  <!--Box 5-->
+  <div class="product-box">
+     <img 
+     src="assets/img/AMPLEKZ [Official Logo] Across T-Shirt/Blue-T.png"
+      alt=""
+      class="product-img"
+      />
+ <h2 class="product-title">Blue Cross T Shirt</h2>
+ <span class="price">$350</span>
+ <i class='bx bx-shopping-bag add-cart'></i>
+ </div>
+
+
+          <!--Box 6-->
+          <div class="product-box">
+             <img 
+             src="assets/img/AMPLEKZ [Official Logo] Across T-Shirt/Green-T.png"
+              alt=""
+              class="product-img"
+              />
+         <h2 class="product-title">Green Cross T Shirt</h2>
+         <span class="price">$350</span>
+         <i class='bx bx-shopping-bag add-cart'></i>
+         </div>
+
+
+                  <!--Box 7-->
+  <div class="product-box">
+     <img 
+     src="assets/img/AMPLEKZ [Official Logo] Across T-Shirt/Purple-T.png"
+      alt=""
+      class="product-img"
+      />
+ <h2 class="product-title">Purple Cross T Shirt</h2>
+ <span class="price">$350</span>
+ <i class='bx bx-shopping-bag add-cart'></i>
+ </div>
+
+
+
+         <!--Box 21-->
+         <div class="product-box">
+            <img 
+            src="assets/img/Jersey/1.png"
+             alt=""
+             class="product-img"
+             />
+        <h2 class="product-title">White Jersey</h2>
+        <span class="price">$450</span>
+        <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+
+
+         <!--Box 22-->
+         <div class="product-box">
+            <img 
+            src="assets/img/Jersey/3-3.png"
+             alt=""
+             class="product-img"
+             />
+        <h2 class="product-title">Black Jersey</h2>
+        <span class="price">$450</span>
+        <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+
+         <!--Box 23-->
+         <div class="product-box">
+            <img 
+            src="assets/img/Jersey/3.png"
+             alt=""
+             class="product-img"
+             />
+        <h2 class="product-title">Blue Jersey</h2>
+        <span class="price">$450</span>
+        <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+
+
+         <!--Box 24-->
+         <div class="product-box">
+            <img 
+            src="assets/img/Jersey/4.png"
+             alt=""
+             class="product-img"
+             />
+        <h2 class="product-title">Red Jersey</h2>
+        <span class="price">$450</span>
+        <i class='bx bx-shopping-bag add-cart'></i>
+        </div> 
+
+
+
+
+        
+         <!--Box 17-->
+         <div class="product-box">
+          <img 
+          src="assets/img/Amplekz Hoodie Across/1.png"
+           alt=""
+           class="product-img"
+           />
+      <h2 class="product-title">White Hoodie</h2>
+      <span class="price">$600</span>
+      <i class='bx bx-shopping-bag add-cart'></i>
+      </div>
+
+
+       <!--Box 18-->
+       <div class="product-box">
+          <img 
+          src="assets/img/Amplekz Hoodie Across/2.png"
+           alt=""
+           class="product-img"
+           />
+      <h2 class="product-title">Black Hoodie</h2>
+      <span class="price">$600</span>
+      <i class='bx bx-shopping-bag add-cart'></i>
+      </div>
+
+       <!--Box 19-->
+       <div class="product-box">
+          <img 
+          src="assets/img/Amplekz Hoodie Across/4.png"
+           alt=""
+           class="product-img"
+           />
+      <h2 class="product-title">Red Hoodie</h2>
+      <span class="price">$600</span>
+      <i class='bx bx-shopping-bag add-cart'></i>
+      </div>
+
+
+       <!--Box 20-->
+       <div class="product-box">
+          <img 
+          src="assets/img/Amplekz Hoodie Across/6.png"
+           alt=""
+           class="product-img"
+           />
+      <h2 class="product-title">Yellow Hoodie</h2>
+      <span class="price">$600</span>
+      <i class='bx bx-shopping-bag add-cart'></i>
+      </div>
+
+
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+
+    </div>
+</section>
+<!--Link To JS-->
+<script src="js/main.js"></script>
+</body>
+</html>
