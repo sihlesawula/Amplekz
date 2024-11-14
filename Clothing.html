@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="css/style.css">
 <!--Box Icons-->
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<script src="https://js.stripe.com/v3/"></script>
 </head>
 
 <body>
@@ -16,12 +17,12 @@
 <header>
     <!--Nav-->
     <div class="nav container">
-     <a href="index.html">
-        <button class="btn-edit">Back</button>
+        <a href="index.html">
+            <button class="btn-edit">Back</button>
         </a>
         <!--Logo-->
-        <a href="#"class="logo">
-            <img src="img/Lil-Amplekz-17_3_2_-removebg-preview (1).png" width="5">
+        <a href="#" class="logo">
+            <img src="img/Lil-Amplekz-17_3_2_-removebg-preview (1).png" width="5" alt="Logo">
         </a>
         <!--Cart Icon-->
         <i class='bx bx-shopping-bag' id="cart-icon" data-quantity="0"></i>
@@ -33,14 +34,33 @@
             <!--Total-->
             <div class="total">
                 <div class="total-title">Total</div>
-                <div class="total-price">$0</div>
+                <div class="total-price">R0</div>
             </div>
-            <!--Buy Button-->
-            <button type="button" class="btn-buy">Pay Now</button>
+            
+            <!-- PayFast Test Environment Form -->
+            <form id="payfast-form" action="https://sandbox.payfast.co.za/eng/process" method="post">
+                <!-- Sandbox Testing Credentials -->
+                <input type="hidden" name="merchant_id" value="10000100">
+                <input type="hidden" name="merchant_key" value="46f0cd694581a">
+                
+                <!-- Test Environment URLs -->
+                <input type="hidden" name="return_url" value="http://127.0.0.1:5500/success.html">
+                <input type="hidden" name="cancel_url" value="http://127.0.0.1:5500/cancel.html">
+                <input type="hidden" name="notify_url" value="http://127.0.0.1:5500/notify.html">
+                
+                <!-- Required PayFast Fields -->
+                <input type="hidden" name="amount" id="payfast-amount" value="0">
+                <input type="hidden" name="item_name" value="Amplekz Clothing Purchase">
+                <input type="hidden" name="email_address" id="email_address">
+                
+                <!-- PayFast Button -->
+                <button type="submit" class="btn-buy">Pay with PayFast (Test)</button>
+            </form>
+
             <!--Close Cart-->
             <i class='bx bx-x' id="close-cart"></i>
+        </div>
     </div>
-
 </header>
 <!--Products-->
 <section class="shop container">
@@ -56,7 +76,7 @@
              class="product-img"
              />
         <h2 class="product-title">Black T Shirt</h2>
-        <span class="price">$350</span>
+        <span class="price">R350</span>
         <i class='bx bx-shopping-bag add-cart'></i>
         </div>
 
@@ -68,7 +88,7 @@
       class="product-img"
       />
  <h2 class="product-title">White T Shirt</h2>
- <span class="price">$350</span>
+ <span class="price">R350</span>
  <i class='bx bx-shopping-bag add-cart'></i>
  </div>
 
@@ -81,7 +101,7 @@
              class="product-img"
              />
         <h2 class="product-title">Blue T Shirt</h2>
-        <span class="price">$350</span>
+        <span class="price">R350</span>
         <i class='bx bx-shopping-bag add-cart'></i>
         </div>
 
@@ -94,7 +114,7 @@
                      class="product-img"
                      />
                 <h2 class="product-title">Green T Shirt</h2>
-                <span class="price">$350</span>
+                <span class="price">R350</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
                 </div>
 
@@ -108,7 +128,7 @@
              class="product-img"
              />
         <h2 class="product-title">Navy T Shirt</h2>
-        <span class="price">$350</span>
+        <span class="price">R350</span>
         <i class='bx bx-shopping-bag add-cart'></i>
         </div>
 
@@ -122,7 +142,7 @@
                      class="product-img"
                      />
                 <h2 class="product-title">Purple T Shirt</h2>
-                <span class="price">$350</span>
+                <span class="price">R350</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
                 </div>
 
@@ -136,7 +156,7 @@
              class="product-img"
              />
         <h2 class="product-title">Red T Shirt</h2>
-        <span class="price">$350</span>
+        <span class="price">R350</span>
         <i class='bx bx-shopping-bag add-cart'></i>
         </div>
                          <!--Box 16-->
@@ -147,7 +167,7 @@
              class="product-img"
              />
         <h2 class="product-title">Yellow T Shirt</h2>
-        <span class="price">$350</span>
+        <span class="price">R350</span>
         <i class='bx bx-shopping-bag add-cart'></i>
         </div>
 
@@ -160,7 +180,7 @@
       class="product-img"
       />
  <h2 class="product-title">Black  Cross T Shirt</h2>
- <span class="price">$350</span>
+ <span class="price">R350</span>
  <i class='bx bx-shopping-bag add-cart'></i>
  </div>
 
@@ -173,7 +193,7 @@
       class="product-img"
       />
  <h2 class="product-title">Red Cross T Shirt</h2>
- <span class="price">$350</span>
+ <span class="price">R350</span>
  <i class='bx bx-shopping-bag add-cart'></i>
  </div>
 
@@ -185,7 +205,7 @@
       class="product-img"
       />
  <h2 class="product-title">Purple Cross T Shirt</h2>
- <span class="price">$350</span>
+ <span class="price">R350</span>
  <i class='bx bx-shopping-bag add-cart'></i>
  </div>
 
@@ -198,7 +218,7 @@
       class="product-img"
       />
  <h2 class="product-title">Yellow Cross T Shirt</h2>
- <span class="price">$350</span>
+ <span class="price">R350</span>
  <i class='bx bx-shopping-bag add-cart'></i>
  </div>
 
@@ -211,7 +231,7 @@
       class="product-img"
       />
  <h2 class="product-title">Blue Cross T Shirt</h2>
- <span class="price">$350</span>
+ <span class="price">R350</span>
  <i class='bx bx-shopping-bag add-cart'></i>
  </div>
 
@@ -224,7 +244,7 @@
               class="product-img"
               />
          <h2 class="product-title">Green Cross T Shirt</h2>
-         <span class="price">$350</span>
+         <span class="price">R350</span>
          <i class='bx bx-shopping-bag add-cart'></i>
          </div>
 
@@ -237,7 +257,7 @@
       class="product-img"
       />
  <h2 class="product-title">Purple Cross T Shirt</h2>
- <span class="price">$350</span>
+ <span class="price">R350</span>
  <i class='bx bx-shopping-bag add-cart'></i>
  </div>
 
@@ -251,7 +271,7 @@
              class="product-img"
              />
         <h2 class="product-title">White Jersey</h2>
-        <span class="price">$450</span>
+        <span class="price">R450</span>
         <i class='bx bx-shopping-bag add-cart'></i>
         </div>
 
@@ -264,7 +284,7 @@
              class="product-img"
              />
         <h2 class="product-title">Black Jersey</h2>
-        <span class="price">$450</span>
+        <span class="price">R450</span>
         <i class='bx bx-shopping-bag add-cart'></i>
         </div>
 
@@ -276,7 +296,7 @@
              class="product-img"
              />
         <h2 class="product-title">Blue Jersey</h2>
-        <span class="price">$450</span>
+        <span class="price">R450</span>
         <i class='bx bx-shopping-bag add-cart'></i>
         </div>
 
@@ -289,7 +309,7 @@
              class="product-img"
              />
         <h2 class="product-title">Red Jersey</h2>
-        <span class="price">$450</span>
+        <span class="price">R450</span>
         <i class='bx bx-shopping-bag add-cart'></i>
         </div> 
 
@@ -305,7 +325,7 @@
            class="product-img"
            />
       <h2 class="product-title">White Hoodie</h2>
-      <span class="price">$600</span>
+      <span class="price">R600</span>
       <i class='bx bx-shopping-bag add-cart'></i>
       </div>
 
@@ -318,7 +338,7 @@
            class="product-img"
            />
       <h2 class="product-title">Black Hoodie</h2>
-      <span class="price">$600</span>
+      <span class="price">R600</span>
       <i class='bx bx-shopping-bag add-cart'></i>
       </div>
 
@@ -330,7 +350,7 @@
            class="product-img"
            />
       <h2 class="product-title">Red Hoodie</h2>
-      <span class="price">$600</span>
+      <span class="price">R600</span>
       <i class='bx bx-shopping-bag add-cart'></i>
       </div>
 
@@ -343,13 +363,14 @@
            class="product-img"
            />
       <h2 class="product-title">Yellow Hoodie</h2>
-      <span class="price">$600</span>
+      <span class="price">R600</span>
       <i class='bx bx-shopping-bag add-cart'></i>
       </div>
 
 
 
 
+        <br>
         <br>
         <br>
         <br>
